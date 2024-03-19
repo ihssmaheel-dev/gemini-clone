@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import "./Main.css"
 import { assets } from '../../../assets/assets'
 import { Context } from '../../../context/Context'
+import ReactMarkdown from "react-markdown"
+import Typist from 'react-typist'
 
 const Main = () => {
 
@@ -52,7 +54,11 @@ const Main = () => {
                                     <hr />
                                     <hr />
                                 </div> 
-                                : <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+                                : <p>
+                                    <Typist avgTypingDelay={1} stdTypingDelay={1} cursor={{show: false}}>
+                                        <ReactMarkdown>{resultData}</ReactMarkdown>
+                                    </Typist>
+                                </p>
                             }
                         </div>
                     </div> 
