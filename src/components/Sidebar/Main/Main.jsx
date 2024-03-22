@@ -55,7 +55,7 @@ const Main = () => {
                                     <hr />
                                 </div> 
                                 : <p>
-                                    <Typist avgTypingDelay={2} stdTypingDelay={2} cursor={{show: false}}>
+                                    <Typist avgTypingDelay={1} stdTypingDelay={1} cursor={{show: false}}>
                                         <ReactMarkdown>{resultData}</ReactMarkdown>
                                     </Typist>
                                 </p>
